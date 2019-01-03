@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StreetFighterApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="483.594" Width="478.507" Loaded="Window_Loaded">
+	<Grid>
+		<TabControl HorizontalAlignment="Left" Height="434" Margin="10,10,0,0" VerticalAlignment="Top" Width="452">
+			<TabItem Header="Cities Management">
+				<Grid Background="#FFE5E5E5">
+					<DataGrid x:Name="CitiesDataGrid" HorizontalAlignment="Left" Height="236" Margin="15,160,0,0" VerticalAlignment="Top" Width="401" SelectionChanged="CitiesDataGrid_SelectionChanged"/>
+					<Label Content="ID" HorizontalAlignment="Left" Margin="25,51,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label Content="NAME" HorizontalAlignment="Left" Margin="23,81,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<TextBox x:Name="city_id_textbox" HorizontalAlignment="Left" Height="23" Margin="80,54,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top" Width="102"/>
+					<TextBox x:Name="city_name_textbox" HorizontalAlignment="Left" Height="24" Margin="80,82,0,0" TextWrapping="Wrap" Text="City name" VerticalAlignment="Top" Width="196"/>
+					<Button x:Name="insert_btn" Content="INSERT" HorizontalAlignment="Left" Margin="340,41,0,0" VerticalAlignment="Top" Width="76" Height="20" Click="Insert_btn_Click"/>
+					<Button x:Name="update_btn" Content="UPDATE" HorizontalAlignment="Left" Margin="340,69,0,0" VerticalAlignment="Top" Width="76" Height="20" Click="Update_btn_Click" IsEnabled="False"/>
+					<Button x:Name="delete_btn" Content="DELETE" HorizontalAlignment="Left" Margin="340,98,0,0" VerticalAlignment="Top" Width="76" Height="20" Click="Delete_btn_Click" IsEnabled="False"/>
+					<Button x:Name="reset_btn" Content="RESET" HorizontalAlignment="Left" Height="20" Margin="219,119,0,0" VerticalAlignment="Top" Width="75" Click="Reset_btn_Click"/>
+					<GroupBox x:Name="cities_groupBox" Header="Cities Information" HorizontalAlignment="Left" Height="128" Margin="16,21,0,0" VerticalAlignment="Top" Width="296">
+					</GroupBox>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Fighters Management">
+				<Grid Background="#FFE5E5E5"/>
+			</TabItem>
+		</TabControl>
+	</Grid>
 </Window>
